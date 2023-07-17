@@ -2,13 +2,14 @@
 body,html {
     height: 100%;
     margin :0;
+    
 }
 
 body
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between;    
 }
 
 header
@@ -23,18 +24,12 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     flex-direction: column;
-    margin: 0 15%;
-    min-width: 60%;
+    margin: 0 2em;
+    width: 50vh;
     height: 80vh;
-
+    align-self:center;
     
-}
-
-.placeFill
-{
-    border: green 3px solid;
 }
 
 .answerDisplay
@@ -59,7 +54,7 @@ header,footer
     background-color: #f7ece1;
 }
 
-.buttonBoard,.nums,footer,.calcBoard,header
+.buttonBoard,.nums,footer,.calcBoard,header,.numserase
 {
     border: red 2px solid;
 }
@@ -67,10 +62,20 @@ header,footer
 .buttonBoard
 {
     display: grid ;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px 100px; 
-    column-gap: 10px;
-    row-gap: 10px;
-    
+    grid-template-columns:10vh 10vh 10vh 10vh;
+    grid-template-rows: 10vh 10vh 10vh 10vh;
+    column-gap: 1em;
+    row-gap: 1em;
+    margin:  1em 2em;
+}
+.eraser
+{
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 100%;
+}
+.numserase
+{
+    padding: 1em 17%;
 }
 
