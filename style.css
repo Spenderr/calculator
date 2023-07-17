@@ -1,0 +1,44 @@
+
+body,html {
+    
+    height: 100%;
+    margin :0;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header
+{
+    display: flex;
+    justify-content: space-around;
+    border: red 2px solid;
+    margin: 0 0 2rem 0;
+}
+.calcBoard
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: red 2px solid;
+    flex-direction: column;
+    margin: 0 20vh;
+}
+.placeFill
+{
+    border: green 3px solid;
+}
+.answerDisplay
+{
+    border: grey 4px solid;
+    border-radius: 1rem;
+}
+
+footer
+{
+    margin: 2em 0 0 0;
+    padding: 2em;
+    border: red 2px solid;
+}
