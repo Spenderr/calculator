@@ -10,6 +10,7 @@ body
     display: flex;
     flex-direction: column;
     justify-content: space-between;    
+    
 }
 
 header
@@ -17,6 +18,9 @@ header
     display: flex;
     justify-content: space-around;
     margin: 0 0 2rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-direction: row;
+    
 }
 
 .calcBoard
@@ -29,15 +33,28 @@ header
     width: 50vh;
     height: 80vh;
     align-self:center;
+    border-radius: 30px;
+    box-shadow:5px 10px 5px  #888888;
+    background-color: rgba(39, 39, 39, 0.554);
     
 }
 
 .answerDisplay
 {
-    border: grey 4px solid;
+    display: flex;
+    flex-direction: column;
+    border: rgb(0, 0, 0) 4px solid;
     border-radius: 1rem;
     width: 90%;
     margin: 20px;
+    min-height: 10%;
+    background-color: aliceblue;
+    
+}
+.inputOutput
+{
+    padding: 0 10px;
+    font-family:'Courier New', Courier, monospace;
 }
 
 footer
@@ -51,13 +68,15 @@ footer
 
 header,footer
 {
-    background-color: #f7ece1;
+    background-color: rgb(114, 216, 187);
 }
 
+/*
 .buttonBoard,.nums,footer,.calcBoard,header,.numserase
 {
     border: red 2px solid;
 }
+*/
 
 .buttonBoard
 {
@@ -76,6 +95,34 @@ header,footer
 }
 .numserase
 {
-    padding: 1em 17%;
+    padding: 20px 16%;
+    font-size: large;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 17px;
+    background-color: white;
 }
+
+.nums
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-family:'Courier New', Courier, monospace;
+    border-radius: 17px;
+    box-shadow: 2px;
+    background-color: white;
+}
+
+.nums:hover,.numserase:hover
+{
+    background-color: rgb(47, 198, 183);
+    color: #f7ece1;
+    cursor: pointer;
+}
+.nums,.numserase,.calcBoard
+{
+    border: black 3px solid;
+}
+
 
