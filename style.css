@@ -2,7 +2,6 @@
 body,html {
     height: 100%;
     margin :0;
-    
 }
 
 body
@@ -35,7 +34,8 @@ header
     align-self:center;
     border-radius: 30px;
     box-shadow:5px 10px 5px  #888888;
-    background-color: rgba(39, 39, 39, 0.554);
+    background-color: rgba(248, 111, 255, 0.554);
+    
     
 }
 

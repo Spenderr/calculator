@@ -1,18 +1,95 @@
-function operate(command,first,second)
+var inputNum = "";
+var outputNum ="";
+var command = 0;
+
+const output = document.getElementById("output");
+const input = document.getElementById("input");
+
+const one = document.getElementById("1");
+const two = document.getElementById("2");
+const three = document.getElementById("3");
+const four = document.getElementById("4");
+const five = document.getElementById("5");
+const six = document.getElementById("6");
+const seven = document.getElementById("7");
+const eight = document.getElementById("8");
+const nine = document.getElementById("9");
+const dot = document.getElementById(".");
+
+const minus = document.getElementById("-");
+const equals = document.getElementById("=");
+const plus = document.getElementById("+");
+const multiplication = document.getElementById("x");
+const division = document.getElementById("/");
+
+one.onclick = function(){inputNum+="1";input.innerHTML = inputNum;};
+two.onclick = function(){inputNum+="2";input.innerHTML = inputNum;};
+three.onclick = function(){inputNum+="3";input.innerHTML = inputNum;};
+four.onclick = function(){inputNum+="4";input.innerHTML = inputNum;};
+five.onclick = function(){inputNum+="5";input.innerHTML = inputNum;};
+six.onclick = function(){inputNum+="6";input.innerHTML = inputNum;};
+seven.onclick = function(){inputNum+="7";input.innerHTML = inputNum;};
+eight.onclick = function(){inputNum+="8";input.innerHTML = inputNum;};
+nine.onclick = function(){inputNum+="9";input.innerHTML = inputNum;};
+dot.onclick = function(){inputNum+=".";input.innerHTML = inputNum;};
+
+plus.onclick = function(){command=1;input.innerHTML = "+";outputNum = inputNum;inputNum = "";}
+minus.onclick = function(){command=2;input.innerHTML = "-";outputNum = inputNum;inputNum = "";}
+multiplication.onclick = function(){command=3;input.innerHTML = "x";outputNum = inputNum;inputNum = "";}
+division.onclick = function(){command=4;input.innerHTML = "/";outputNum = inputNum;inputNum = "";}
+
+equals.onclick = function(){operate(command)};
+
+
+
+
+
+
+function operate(command)
 {
     switch(command)
     {
     case 1 :
-        first+=second;
+        outputNum = add(outputNum,inputNum);
         break;
     case 2 :
-        first-=second;
+        outputNum = subtract(outputNum,inputNum);
         break;
     case 3 :
-        first*=second;
+        outputNum = multiply(outputNum,inputNum);
         break;
     case 4 : 
-        first/=second;
+        outputNum = divide(outputNum,inputNum);
         break;
     }
+    output.innerHTML = outputNum;
+    input.innerHTML = " ";
+    inputNum = "";
 }
+
+
+
+function add(num1, num2)
+{
+    return Number(num1)+Number(num2);
+}
+function subtract(num1, num2)
+{
+    return Number(num1)-Number(num2);
+}
+function multiply(num1,num2)
+{
+    return Number(num1)*Number(num2);
+}
+function divide(num1,num2)
+{
+    return Number(num1)/Number(num2);
+}
+
+
+
+
+
+
+
+
