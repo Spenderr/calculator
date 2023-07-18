@@ -1,10 +1,14 @@
+//numbers of answer and input and operation selected with a number
 var inputNum = "";
 var outputNum ="";
 var command = 0;
 
+//input output delete buttons
 const output = document.getElementById("output");
 const input = document.getElementById("input");
+const del = document.getElementById("delete")
 
+//number buttons query
 const one = document.getElementById("1");
 const two = document.getElementById("2");
 const three = document.getElementById("3");
@@ -16,12 +20,14 @@ const eight = document.getElementById("8");
 const nine = document.getElementById("9");
 const dot = document.getElementById(".");
 
+//operation buttons query
 const minus = document.getElementById("-");
 const equals = document.getElementById("=");
 const plus = document.getElementById("+");
 const multiplication = document.getElementById("x");
 const division = document.getElementById("/");
 
+//on click of number buttons, added to string and displayed on screen
 one.onclick = function(){inputNum+="1";input.innerHTML = inputNum;};
 two.onclick = function(){inputNum+="2";input.innerHTML = inputNum;};
 three.onclick = function(){inputNum+="3";input.innerHTML = inputNum;};
@@ -33,12 +39,17 @@ eight.onclick = function(){inputNum+="8";input.innerHTML = inputNum;};
 nine.onclick = function(){inputNum+="9";input.innerHTML = inputNum;};
 dot.onclick = function(){inputNum+=".";input.innerHTML = inputNum;};
 
-plus.onclick = function(){command=1;input.innerHTML = "+";outputNum = inputNum;inputNum = "";}
+// to be improved
+plus.onclick = function(){command=1;input.innerHTML = "+";outputNum = inputNum;inputNum = "";};
 minus.onclick = function(){command=2;input.innerHTML = "-";outputNum = inputNum;inputNum = "";}
 multiplication.onclick = function(){command=3;input.innerHTML = "x";outputNum = inputNum;inputNum = "";}
 division.onclick = function(){command=4;input.innerHTML = "/";outputNum = inputNum;inputNum = "";}
 
+del.onclick = function(){outputNum = "";inputNum = "", input.innerHTML=inputNum;output.innerHTML=outputNum};
+
 equals.onclick = function(){operate(command)};
+
+
 
 
 
@@ -68,7 +79,7 @@ function operate(command)
 }
 
 
-
+//funtions of math, string converted to int and then operated
 function add(num1, num2)
 {
     return Number(num1)+Number(num2);
