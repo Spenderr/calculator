@@ -46,8 +46,8 @@ header
     border: rgb(0, 0, 0) 4px solid;
     border-radius: 1rem;
     width: 90%;
-    margin: 20px;
-    min-height: 10%;
+    margin: 20px 20px 0 20px;
+    height: 15%;
     background-color: aliceblue;
     
 }
@@ -85,7 +85,7 @@ header,footer
     grid-template-rows: 10vh 10vh 10vh 10vh;
     column-gap: 1em;
     row-gap: 1em;
-    margin:  1em 2em;
+    margin:  0 2em 1em 2em;
 }
 .eraser
 {

@@ -6,9 +6,11 @@ var command = 0;
 //input output delete buttons
 const output = document.getElementById("output");
 const input = document.getElementById("input");
-const del = document.getElementById("delete")
+const del = document.getElementById("delete");
+const erase = document.getElementById("erase");
 
 //number buttons query
+const zero = document.getElementById("0");
 const one = document.getElementById("1");
 const two = document.getElementById("2");
 const three = document.getElementById("3");
@@ -28,6 +30,7 @@ const multiplication = document.getElementById("x");
 const division = document.getElementById("/");
 
 //on click of number buttons, added to string and displayed on screen
+zero.onclick = function(){inputNum+="0";input.innerHTML = inputNum;};
 one.onclick = function(){inputNum+="1";input.innerHTML = inputNum;};
 two.onclick = function(){inputNum+="2";input.innerHTML = inputNum;};
 three.onclick = function(){inputNum+="3";input.innerHTML = inputNum;};
@@ -40,12 +43,13 @@ nine.onclick = function(){inputNum+="9";input.innerHTML = inputNum;};
 dot.onclick = function(){inputNum+=".";input.innerHTML = inputNum;};
 
 // to be improved
-plus.onclick = function(){command=1;input.innerHTML = "+";outputNum = inputNum;inputNum = "";};
-minus.onclick = function(){command=2;input.innerHTML = "-";outputNum = inputNum;inputNum = "";}
-multiplication.onclick = function(){command=3;input.innerHTML = "x";outputNum = inputNum;inputNum = "";}
-division.onclick = function(){command=4;input.innerHTML = "/";outputNum = inputNum;inputNum = "";}
+plus.onclick = function(){command=1;input.innerHTML = "+";outputNum = inputNum;inputNum = "";plus.style.backgroundColor='blue';minus.style.backgroundColor='white';multiplication.style.backgroundColor='white';division.style.backgroundColor='white';};
+minus.onclick = function(){command=2;input.innerHTML = "-";outputNum = inputNum;inputNum = "";plus.style.backgroundColor='white';minus.style.backgroundColor='blue';multiplication.style.backgroundColor='white';division.style.backgroundColor='white';}
+multiplication.onclick = function(){command=3;input.innerHTML = "x";outputNum = inputNum;inputNum = "";plus.style.backgroundColor='white';minus.style.backgroundColor='white';multiplication.style.backgroundColor='blue';division.style.backgroundColor='white';}
+division.onclick = function(){command=4;input.innerHTML = "/";outputNum = inputNum;inputNum = "";plus.style.backgroundColor='white';minus.style.backgroundColor='white';multiplication.style.backgroundColor='white';division.style.backgroundColor='blue';}
 
 del.onclick = function(){outputNum = "";inputNum = "", input.innerHTML=inputNum;output.innerHTML=outputNum};
+erase.onclick = function(){inputNum = inputNum.slice(0,-1);input.innerHTML = inputNum;} 
 
 equals.onclick = function(){operate(command)};
 
