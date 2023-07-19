@@ -47,15 +47,32 @@ header
     border-radius: 1rem;
     width: 90%;
     margin: 20px 20px 0 20px;
-    height: 15%;
+    height: 20%;
     background-color: aliceblue;
-    
+    justify-content: space-between;
+
 }
+
 .inputOutput
 {
-    padding: 0 10px;
-    font-family:'Courier New', Courier, monospace;
+ font-family:'Courier New', Courier, monospace;
+ margin: 20px;
 }
+#input
+{
+    min-height: 20%;
+    font-size: x-large;
+}
+#output
+{
+    min-height: 20%;
+    text-align: end;
+    font-size: xxx-large;
+    font-weight: bold;
+}
+
+
+
 
 footer
 {
@@ -100,6 +117,7 @@ header,footer
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 17px;
     background-color: white;
+    
 }
 
 .nums
@@ -124,5 +142,4 @@ header,footer
 {
     border: black 3px solid;
 }
-
 
